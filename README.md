@@ -27,13 +27,15 @@ EDTSurf -i inputfile ...
 Specific options:
 - -o prefix of output files (default is the prefix of inputfile)
 - -t triangulation type, 1-MC 2-VCMC (default is 2)
-- -s surface type, 1-VWS 2-SAS 3-MS 0-DEPTH (default is 3)
+- -s surface type, 1-VWS 2-SAS 3-MS 4-SES 0-DEPTH (default is 3)
 - -c color mode, 1-pure 2-atom 3-chain (default is 2)
 - -p probe radius, float point in [0,2.0] (default is 1.4)
 - -h inner or outer surface for output, 1-inner and outer 2-outer 3-inner (default is 1)
 - -f scale factor, float point in (0,20.0] (default is 4.0)
 
 Molecule is scaled by this factor to fit in a bounding box. Scale factor is the larger the better, but will increase the memory use. Our strategy is first enlarging the molecule to check if it exceeds the maximum bounding box. If yes, then reset a proper scale factor to fit the molecule in the maximum bounding box.
+
+NOTE: Option -s 3 (MS, i.e. molecular surface calculation) ignores hydrogen atoms, while option -s 4 (SES, solvent excluded surface) takes them into account.
 
 ## Outputs:
 
