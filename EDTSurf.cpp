@@ -115,6 +115,7 @@ int main(int argc, char** argv)
 				else if(tval==2) inum[1]=2;
 				else if(tval==3) inum[1]=3;
 				else if(tval==0) inum[1]=0;
+				else if(tval==4) inum[1]=4;
 				else
 				{
 					printf("omit wrong value after -s\n");
@@ -241,7 +242,10 @@ int main(int argc, char** argv)
 		printf("surface: VWS, ");
 	else if(inum[1]==2 || inum[1]==0)
 		printf("surface: SAS, ");
-	else printf("surface: MS, ");
+	else if(inum[1]==3) 
+		printf("surface: MS, ");
+	else if(inum[1]==4)
+		printf("surface: SES, ");
 	if(inum[2]==1)
 		printf("color: pure, ");
 	else if(inum[2]==2)
